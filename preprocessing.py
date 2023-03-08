@@ -7,7 +7,7 @@ def create_vocab(file_path = './data/vocab.txt') -> tuple:
         lines = [i[:-1] for i in lines]  # Remove new line characters
     hold_to_idx = {hold: idx for idx, hold in enumerate(lines)}
     idx_to_hold = {idx: hold for idx, hold in enumerate(lines)}
-    return (hold_to_idx, idx_to_hold)
+    return hold_to_idx, idx_to_hold
 
 hold_to_idx, idx_to_hold = create_vocab()
 vocab_size = len(hold_to_idx)
